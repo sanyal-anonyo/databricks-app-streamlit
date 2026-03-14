@@ -5,7 +5,7 @@ import os
 import google.generativeai as genai
 
 
-st.title("🎬 Movie Data Manager")
+st.title(" Movie Data Manager")
 
 # Sidebar for Credentials
 with st.sidebar:
@@ -30,7 +30,7 @@ if submit_button:
                 # Use '?' for parameters to keep it secure and clean
                 insert_query = "INSERT INTO test.bronze_test_rating.movies (id, rating) VALUES (?, ?)"
                 cursor.execute(insert_query, (movie_id, rating))
-                st.success(f"✅ Inserted ID {movie_id} with rating {rating}!")
+                st.success(f" Inserted ID {movie_id} with rating {rating}!")
     except Exception as e:
         st.error(f"Upload Error: {e}")
 
@@ -126,7 +126,7 @@ def synthesize_response(user_question, data):
     return response.text
 
 # --- Streamlit UI ---
-st.header("📊 Databricks AI Assistant")
+st.header(" Databricks AI Assistant")
 st.markdown("Ask questions about your data in plain English.")
 
 # Initialize chat history
